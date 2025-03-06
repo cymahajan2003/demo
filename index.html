@@ -24,7 +24,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            padding: 30px 50px; /* Increased padding for larger navbar */
             position: fixed;
             width: 100%;
             z-index: 1000;
@@ -33,7 +33,7 @@
         }
         
         .logo {
-            font-size: 24px;
+            font-size: 28px; /* Slightly larger logo text */
             font-weight: 700;
             color: #000000;
         }
@@ -45,32 +45,32 @@
         .nav-toggle-label {
             display: none;
             cursor: pointer;
-            width: 30px;
-            height: 20px;
+            width: 35px; /* Larger toggle for mobile */
+            height: 25px;
             position: relative;
             z-index: 1001;
         }
         
         .nav-toggle-label span {
             background: #000000;
-            height: 3px;
+            height: 4px; /* Thicker lines for visibility */
             width: 100%;
             position: absolute;
             transition: all 0.3s ease;
         }
         
         .nav-toggle-label span:nth-child(1) { top: 0; }
-        .nav-toggle-label span:nth-child(2) { top: 8px; }
-        .nav-toggle-label span:nth-child(3) { top: 16px; }
+        .nav-toggle-label span:nth-child(2) { top: 10px; }
+        .nav-toggle-label span:nth-child(3) { top: 20px; }
         
         .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
             transform: rotate(45deg);
-            top: 8px;
+            top: 10px;
         }
         .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) { opacity: 0; }
         .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
             transform: rotate(-45deg);
-            top: 8px;
+            top: 10px;
         }
         
         nav {
@@ -83,7 +83,7 @@
             color: #000000;
             text-decoration: none;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 14px; /* Slightly smaller font size for balance */
             transition: color 0.3s ease;
         }
         
@@ -103,7 +103,7 @@
             border: 1px solid #000000;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 16px;
+            font-size: 14px; /* Adjusted font size */
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -119,7 +119,7 @@
             justify-content: space-between;
             align-items: center;
             min-height: 100vh;
-            padding: 100px 50px 50px;
+            padding: 120px 50px 50px; /* Adjusted padding to account for larger navbar */
             position: relative;
         }
         
@@ -293,11 +293,11 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             header {
-                padding: 15px 20px;
+                padding: 20px 20px; /* Adjusted padding for mobile */
             }
         
             .logo {
-                font-size: 20px;
+                font-size: 24px; /* Slightly smaller logo text */
             }
         
             .nav-toggle-label {
@@ -316,6 +316,7 @@
                 align-items: center;
                 transform: translateX(-100%);
                 transition: transform 0.3s ease;
+                padding: 20px 0; /* Added padding for better spacing */
             }
         
             .nav-toggle:checked ~ nav {
@@ -323,8 +324,8 @@
             }
         
             nav a {
-                margin: 15px 0;
-                font-size: 1.5em;
+                margin: 20px 0; /* Increased spacing between links */
+                font-size: 18px; /* Larger font for better readability */
                 color: #000000;
             }
         
@@ -358,14 +359,15 @@
             }
         
             .stats {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
                 gap: 15px;
+                margin-bottom: 40px;
             }
         
             .stat-card {
-                width: 100%;
-                max-width: 120px;
+                width: 100px;
+                padding: 15px;
             }
         
             .description {
@@ -397,24 +399,27 @@
         
         @media (max-width: 480px) {
             header {
-                padding: 10px 15px;
+                padding: 15px 15px;
             }
         
             .logo {
-                font-size: 18px;
+                font-size: 20px;
             }
         
             .nav-toggle-label {
-                width: 25px;
-                height: 18px;
+                width: 30px;
+                height: 20px;
             }
         
-            .nav-toggle-label span:nth-child(2) { top: 7px; }
-            .nav-toggle-label span:nth-child(3) { top: 14px; }
+            .nav-toggle-label span:nth-child(2) { top: 8px; }
+            .nav-toggle-label span:nth-child(3) { top: 16px; }
+        
+            .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) { top: 8px; }
+            .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) { top: 8px; }
         
             nav a {
-                font-size: 1.2em;
-                margin: 10px 0;
+                font-size: 16px;
+                margin: 15px 0;
             }
         
             .hero {
@@ -434,11 +439,14 @@
             }
         
             .stats {
+                flex-direction: row;
+                justify-content: center;
                 gap: 10px;
             }
         
             .stat-card {
-                max-width: 100px;
+                width: 90px;
+                padding: 10px;
             }
         
             .description {
@@ -481,7 +489,6 @@
             <a href="#pricing">Products</a>
             <a href="#resources">Resources</a>
             <a href="#resources">Contacts</a>
-
         </nav>
         <div class="header-right">
             <button class="sign-in-btn">Sign in</button>
